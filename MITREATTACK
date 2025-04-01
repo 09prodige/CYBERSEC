@@ -1,0 +1,68 @@
+# T1592 - Gather Victim Host Information
+
+## MITRE ATT&CK Tactic: Reconnaissance
+
+**ID**: T1592  
+**Tactic**: Reconnaissance  
+**Platform**: All  
+**Permissions Required**: None  
+**Data Sources**: Web analytics, Network protocol analysis, File monitoring
+
+---
+
+## 🔎 Description
+
+Adversaries may gather information about the victim's hosts that can be used during targeting. This technique typically occurs in the early phases of a cyber operation. Information about hosts may include:
+
+- Assigned IP addresses
+- Hostnames
+- Operating systems (OS)
+- System architecture
+- Roles of the host (e.g., web server, mail server)
+- Running services
+- Network interfaces
+
+This data allows adversaries to identify potential targets for exploitation and determine how best to access them.
+
+---
+
+## 🔗 Resources & References
+
+- [MITRE ATT&CK T1592 Technique Page](https://attack.mitre.org/techniques/T1592/)
+- [Search Victim-Owned Websites](https://attack.mitre.org/techniques/T1592/002/)
+- [Gather Victim Org Information](https://attack.mitre.org/techniques/T1591/)
+
+---
+
+## ⚖️ Example Tools & Techniques
+
+| Tool/Method                | Description                                           |
+|---------------------------|-------------------------------------------------------|
+| WHOIS                     | Retrieves domain registration details                |
+| nslookup / dig            | Gathers DNS records and server info                  |
+| Shodan / Censys           | Provides data on exposed devices and services        |
+| Banner Grabbing           | Identifies services running on open ports            |
+| Port Scanning (e.g., Nmap)| Detects live hosts and open ports                    |
+
+---
+
+## 🔐 Defensive Measures
+
+- Monitor DNS, WHOIS, and web traffic for anomalies  
+- Block suspicious external recon attempts  
+- Enforce strict access control on internal host data  
+- Monitor logs for enumeration patterns  
+
+---
+
+## ⚒️ Usage in Red Team / Pentest
+
+During red team operations or penetration tests, this technique is commonly used to:
+
+- Enumerate exposed infrastructure
+- Identify running services and versions
+- Prioritize targets based on their roles or vulnerabilities
+
+Example:
+```bash
+nmap -sV -O 192.168.1.0/24
