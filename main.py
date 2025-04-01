@@ -8,7 +8,8 @@ récupérer l'ip fournit par un user
 3- Vérifier si la cible repond ou non
 4- Utiliser "SubProcess" pour manipuler les commandes Shell
 5- Use if - else
-6- Contrainte :
+6- Contrainte : Doit fonctionner sur Windows/Linux, et gérer les erreurs
+propres au système
 -
 """
 import subprocess
