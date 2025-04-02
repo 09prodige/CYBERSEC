@@ -28,7 +28,7 @@ def generate_key():
 def send_key():
     host = input("Entrez l'adresse IP du serveur SSH (ex: 192.168.45.200) : ").strip()
     user = input("Entrez le nom d'utilisateur sur la machine distante : ").strip()
-    dest_path = f"{user}@{host}:/home/{user}/key_from_target.txt"
+    dest_path = f"{user}@{host}:/home/{user}/key_from_195_168_45_95.txt"
 
     try:
         subprocess.run(["scp", KEY_FILE, dest_path], check=True)
