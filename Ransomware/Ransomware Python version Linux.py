@@ -1,7 +1,3 @@
-# Création d'un script ransomware avec un menu interactif en 3 étapes :
-# 1 - Génération de la clé
-# 2 - Envoi de la clé via SCP (hôte et utilisateur saisis dynamiquement)
-# 3 - Démarrage du chiffrement
 #!/usr/bin/env python3
 # ⚠️ Script pédagogique de ransomware en environnement isolé
 
