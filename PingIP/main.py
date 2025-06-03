@@ -1,7 +1,6 @@
 """
 Auteur: Jeremie AKWE
 Date: 31/03/2025
-EXERCICE 1 :
  1-Utiliser la fonction input pour
 récupérer l'ip fournit par un user
 2- Executer une commande ping depuis python
